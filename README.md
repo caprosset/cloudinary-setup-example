@@ -6,12 +6,12 @@ Register for free here: <https://cloudinary.com/users/register/free>
 
 
 
-### Install packages
+### 2. Install packages
 
 Install the following 3 packages in your project folder:
-* cloudinary [https://www.npmjs.com/package/cloudinary]
-* multer-storage-cloudinary [https://www.npmjs.com/package/multer-storage-cloudinary]
-* multer [https://www.npmjs.com/package/multer]
+* [cloudinary](https://www.npmjs.com/package/cloudinary)
+* [multer-storage-cloudinary](https://www.npmjs.com/package/multer-storage-cloudinary)
+* [multer](https://www.npmjs.com/package/multer)
 
 In your terminal:
 ```
@@ -19,7 +19,7 @@ npm install cloudinary multer-storage-cloudinary multer --save
 ```
 
 
-### Cloudinary & multer config
+### 3. Cloudinary & multer config
 
 In your terminal:
 ```
@@ -54,10 +54,10 @@ module.exports = parser;
 ```
 
 
-### In the hbs view
+### 4. Create the form in the hbs view
 
-Add the attribute ```enctype="multipart/form-data"``` to your form   
-and the attribute ```type=file``` to the input field that will hold the image.
+* Add the attribute ```enctype="multipart/form-data"``` to your form   
+* Add the attribute ```type=file``` to the input field that will hold the image.
 
 ```
 <form action="/endPointName" method="POST" enctype="multipart/form-data">
@@ -67,10 +67,11 @@ and the attribute ```type=file``` to the input field that will hold the image.
 ```
 
 
-### In the router where we want to upload the image
+### 5. Inject the parser middleware into the route
 
-Import the parser middleware    
-Add it as an argument prior to the function that handles the POST request
+In the router where we want to upload the image: 
+* Import the parser middleware    
+* Add it as an argument prior to the function that handles the POST request
 
 ```
 const parser = require('./../config/cloudinary');
@@ -84,4 +85,4 @@ router.post('/endPointName', parser.single('photo'), (req, res, next) =>{
 
 
 #### Documentation
-Cloudinary[https://cloudinary.com/documentation]
+[Cloudinary](https://cloudinary.com/documentation)
