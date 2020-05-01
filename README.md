@@ -19,7 +19,7 @@ npm install cloudinary multer-storage-cloudinary multer --save
 ```
 
 
-### 3. Cloudinary & multer config
+### 3. Configure Cloudinary & Multer
 
 In your terminal:
 ```
@@ -77,9 +77,10 @@ In the router where we want to upload the image:
 const parser = require('./../config/cloudinary');
 
 router.post('/endPointName', parser.single('photo'), (req, res, next) =>{
+  // thanks to multer, you have now access to the new object "req.file"
   
-  const image_url = req.file.secure_url
-
+  // get the image URL to save it to the database and/or render the image in your view
+  const image_url = req.file.secure_url;
 }
 ```
 
