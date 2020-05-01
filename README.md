@@ -57,7 +57,7 @@ module.exports = parser;
 ### 4. Create the form in the hbs view
 
 * Add the attribute ```enctype="multipart/form-data"``` to your form   
-* Add the attribute ```type=file``` to the input field that will hold the image.
+* Add the attribute ```type="file"``` to the input field that will hold the image.
 
 ```
 <form action="/endPointName" method="POST" enctype="multipart/form-data">
@@ -67,7 +67,7 @@ module.exports = parser;
 ```
 
 
-### 5. Inject the parser middleware into the route
+### 5. Inject the parsing middleware into the route
 
 In the router where we want to upload the image: 
 * Import the parsing middleware    
