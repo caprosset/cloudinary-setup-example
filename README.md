@@ -11,7 +11,7 @@ Register for free here: <https://cloudinary.com/users/register/free>
 Install the following 3 packages in your project folder:
 * [cloudinary](https://www.npmjs.com/package/cloudinary)
 * [multer-storage-cloudinary](https://www.npmjs.com/package/multer-storage-cloudinary)
-* [multer](https://www.npmjs.com/package/multer)
+* [multer](https://www.npmjs.com/package/multer) => like body-parser, Multer parses incoming bodies and allows us to parse files also (unlike body-parses that parses only data)
 
 In your terminal:
 ```
@@ -70,7 +70,7 @@ module.exports = parser;
 ### 5. Inject the parser middleware into the route
 
 In the router where we want to upload the image: 
-* Import the parser middleware    
+* Import the parsing middleware    
 * Add it as an argument prior to the function that handles the POST request
 
 ```
