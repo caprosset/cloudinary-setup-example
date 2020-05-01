@@ -11,7 +11,7 @@ Register for free here: <https://cloudinary.com/users/register/free>
 Install the following 3 packages in your project folder:
 * [cloudinary](https://www.npmjs.com/package/cloudinary)
 * [multer-storage-cloudinary](https://www.npmjs.com/package/multer-storage-cloudinary)
-* [multer](https://www.npmjs.com/package/multer) => like body-parser, Multer parses incoming bodies and allows us to parse files also (unlike body-parses that parses only data)
+* [multer](https://www.npmjs.com/package/multer) => like body-parser, Multer parses incoming bodies but also allows us to parse files  (unlike body-parser that parses only data)
 
 In your terminal:
 ```
